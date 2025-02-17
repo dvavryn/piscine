@@ -24,6 +24,10 @@ int main(void)
 	{
 		printf("Original:	%s\n", original);
 		printf("Copy:		%s\n", copy);
+
+		free(copy);
+		printf("Copy:		%s\n", copy);
+
 	}
 	else
 	{
