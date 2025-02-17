@@ -15,7 +15,6 @@
 void	ft_strcpy(char *src, char *dest);
 int		ft_strlen(char *str);
 
-
 /* #include <stdio.h>
 
 char	*ft_strdup(char *src);

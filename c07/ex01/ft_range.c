@@ -26,15 +26,16 @@
 #include <stdio.h>
 
 int	*ft_range(int min, int max);
+void ft_write_array(int min, int max, int *arr);
 
 int main(void)
 {
-	int *i = ftrange(1, 20);
+	int *i = ft_range(1, 20);
 	int j = 0;
-
-	while (j < sizeof(i)/sizeof(int))
+	while (*i)
 	{
-		printf("%i",i[j]);
+		printf("%i ", i[j]);
+		i++;
 		j++;
 	}	
 }
@@ -44,4 +45,21 @@ int	*ft_range(int min, int max)
 	if (min >= max)
 		return (NULL);
 	
+	int *buf;
+
+	buf = malloc((max - min) * sizeof(int));
+	ft_write_array(min, max, buf);
+	return (buf);	
+}
+
+void ft_write_array(int min, int max, int *arr)
+{
+	int i;
+
+	i = 0;
+	while (i < (max - min))
+	{
+		arr[i] = min + i;
+		i++;
+	}
 }
