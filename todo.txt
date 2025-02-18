@@ -1,0 +1,43 @@
+sh00
+	ex06
+	ex08
+	ex09
+
+sh01
+	all?
+
+c00
+	ex05
+	ex06
+	ex07
+	ex08
+
+c01
+	ex08
+
+c02
+	? getting eval rn
+
+c03				fixed?
+	ex02
+	ex03
+	ex04 dnc
+
+c04
+	?
+	ex05?	ft_atoi_base.c
+
+c05
+	?
+	ex08?	The Ten Queens
+
+c06
+	?
+
+c07
+	ex00 works?
+	ex01 works?
+	ex02???
+	ex03???
+	ex04???
+	ex05???
