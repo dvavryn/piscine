@@ -37,7 +37,7 @@ int	ft_str_is_printable(char *str)
 	while (str[counter] != '\0')
 	{
 		str_count = str[counter];
-		if (str_count >= 33 && str_count <= 126)
+		if (str_count >= 32 && str_count <= 126)
 			counter++;
 		else
 			return (0);
