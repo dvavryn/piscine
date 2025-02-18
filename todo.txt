@@ -1,9 +1,9 @@
-sh00
+sh00 not mandatory
 	ex06
 	ex08
 	ex09
 
-sh01
+sh01 dont know what works or not
 	all?
 
 c00
@@ -12,27 +12,21 @@ c00
 	ex07
 	ex08
 
-c01
+c01 not mandatory
 	ex08
 
-c02
-	ex06 ?? dnc
+c02 not mandatory
 	ex09
 	ex10
 	ex11
 	ex12
 
 c03				fixed?
-	ex02
-	ex03
-	ex04 dnc
 
-c04
-	?
+c04 should be ok! atoi_base missing! -> 85%
 	ex05?	ft_atoi_base.c
 
-c05
-	?
+c05 should be ok! ten queens missing -> 80%
 	ex08?	The Ten Queens
 
 c06

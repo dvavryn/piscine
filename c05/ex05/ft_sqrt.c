@@ -24,20 +24,14 @@ int main (int argc, char **argv)
  */
 int	ft_sqrt(int nb)
 {
-	double	d;
-	double	epsilon;
+	int	i;
 
 	if (nb < 0)
-		return (-1);
-	if (nb == 0)
 		return (0);
-	d = (double) nb;
-	epsilon = 0.00001;
-	while ((d * d - nb) > epsilon || (nb - d * d) > epsilon)
-	{
-		d = 0.5 * (d + nb / d);
-	}
-	if ((int) d * (int) d != nb)
-		return (0);
-	return ((int) d);
+	i = 0;
+	while (i * i < nb)
+		i++;
+	if (i * i == nb)
+		return (i);
+	return (0);
 }

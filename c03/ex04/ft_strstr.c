@@ -41,27 +41,21 @@ int	main(void)
  */
 char	*ft_strstr(char *str, char *to_find)
 {
-	int	c1;
-	int	c2;
+	int	i;
+	int	j;
 
-	c1 = 0;
-	c2 = 0;
-	if (to_find[c2] == '\0')
+	i = 0;
+	j = 0;
+	if (!*to_find)
+		return (str);
+	while (str[i] != '\0')
 	{
-		return (&str[c1]);
-	}
-	while (str[c1] != '\0')
-	{
-		c2 = 0;
-		while (str[c1 + c2] == to_find[c2] && to_find[c2] != '\0')
-		{
-			c2++;
-		}
-		if (to_find[c2] == '\0')
-		{
-			return (&str[c1]);
-		}
-		c1++;
+		j = 0;
+		while (str[i + j] == to_find[j] && to_find[j] != '\0')
+			j++;
+		if (to_find[j] == '\0')
+			return (&str[i]);
+		i++;
 	}
 	return (0);
 }

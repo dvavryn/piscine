@@ -58,11 +58,10 @@ void	ft_putnbr_base(int nbr, char *base)
 	if (nbr < 0)
 	{
 		write(1, "-", 1);
+		nbr *= -1;
 	}
 	if (nbr >= radix)
-	{
 		ft_putnbr_base(nbr / radix, base);
-	}
 	ft_putchar(ft_put_radix_char(nbr % radix, base));
 }
 
