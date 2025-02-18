@@ -16,7 +16,11 @@ c01
 	ex08
 
 c02
-	? getting eval rn
+	ex06 ?? dnc
+	ex09
+	ex10
+	ex11
+	ex12
 
 c03				fixed?
 	ex02
