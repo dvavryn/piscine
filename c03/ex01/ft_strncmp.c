@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n);
 
@@ -30,7 +30,7 @@ int	main(void)
 	else
 		printf("%s\n%s\n<s1> greater than <s2>\n", s1, s2);
 }
-
+ */
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	counter;

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 char	*ft_strcat(char *dest, char *src);
 
@@ -21,8 +21,7 @@ int	main(void)
 
 	ft_strcat(dest, src);
 	printf("%s\n", dest);
-}
-
+} */
 char	*ft_strcat(char *dest, char *src)
 {
 	int	counter_d;

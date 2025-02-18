@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
 
 char	*ft_strstr(char *str, char *to_find);
 
-/* int	main(void)
+int	main(void)
 {
 	char	*str = "Hallo, das ist ein Teststring";
 	char	*find[] = {
@@ -37,8 +37,8 @@ char	*ft_strstr(char *str, char *to_find);
 		printf("  strstr   : %s\n", result_lib ? result_lib : "NULL");
 		printf("\n");
 	}
-} */
-
+}
+ */
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	c1;

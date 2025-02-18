@@ -22,8 +22,8 @@ int	main (void)
 
 	ft_strncat(dest, src, nb);
 	printf("%s\n", dest);
-}
- */
+} */
+
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int				counter_d;

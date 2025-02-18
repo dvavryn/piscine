@@ -49,8 +49,7 @@ int main()
     printf("strlcat result: %u, strlcat dest: %s\n", result2_str, dest_copy2);
 
     return 0;
-}
- */
+} */
 int	ft_strlen(char *str);
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
