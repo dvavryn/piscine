@@ -63,5 +63,5 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		c1++;
 	}
-	return (NULL);
+	return (0);
 }

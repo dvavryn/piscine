@@ -36,6 +36,6 @@ char	*ft_strcat(char *dest, char *src)
 		dest[counter_d + counter_s] = src[counter_s];
 		counter_s++;
 	}
-	dest[counter_d + counter_s +1] = '\0';
+	dest[counter_d + counter_s] = '\0';
 	return (dest);
 }

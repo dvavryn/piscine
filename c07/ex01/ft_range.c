@@ -14,7 +14,7 @@
 
 void	ft_write_array(int min, int max, int *arr);
 
-/* #include <stdio.h>
+#include <stdio.h>
 int	*ft_range(int min, int max);
 
 int main(void)
@@ -34,8 +34,9 @@ int main(void)
 		printf("%i ", arr[j]);
 		j++;
 	}
+	free(arr);
 }
-*/
+
 int	*ft_range(int min, int max)
 {
 	int	*buf;

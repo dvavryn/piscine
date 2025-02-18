@@ -26,7 +26,7 @@ int	main (void)
 */
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int				counter_d;
+	unsigned int	counter_d;
 	unsigned int	counter_s;
 
 	counter_d = 0;
@@ -38,5 +38,6 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		dest[counter_d + counter_s] = src[counter_s];
 		counter_s++;
 	}
+	dest[counter_d + counter_s] = '\0';
 	return (dest);
 }

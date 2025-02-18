@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+/* #include <stdio.h>
 
 void	bubblesort(char **arr, int n);
-int		ft_strcmp(char *s1, char *s2);
 
 int	main(int argc, char **argv)
 {
@@ -28,6 +26,8 @@ int	main(int argc, char **argv)
 		i++;
 	}
 }
+ */
+int		ft_strcmp(char *s1, char *s2);
 
 void	bubblesort(char **arr, int n)
 {

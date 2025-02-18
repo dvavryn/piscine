@@ -1,51 +1,51 @@
 #include <stdlib.h>
-#include <stdio.h>
 
-int ft_ultimate_range(int **range, int min, int max);
-void ft_write_array(int min, int max, int *array);
-int *ft_range(int min, int max);
+int	ft_ultimate_range(int **range, int main, int max);
 
-int main(void)
+int main (void)
 {
-	int *range = NULL;
-	printf("Size of ft_ultimate_range: %i", ft_ultimate_range(&range, 1, 20));
+	int min = 1;
+	int max = 20;
+	int *ar = NULL;
+	int **arr = *ar;
+	int size = ft_ultimate_range(arr, min, max);
+
+	if (!arr)
+		return 1;
+	int i = 0;
+	while (i < (max - min))
+	{
+		printf("%i", arr[i]);
+		i++;
+	}
+	free(arr);
 }
 
-int ft_ultimate_range(int **range, int min, int max)
-{
-	int size;
+void	ft_write_array(int min, int max, int **arr);
 
-	if (min >= max)
+int	ft_ultimate_range(int **range, int min, int max)
+{
+	if (min > max)
 	{
-		*range = NULL;
+		range = NULL;
 		return (0);
 	}
-	*range = ft_range(min, max);
+	range = malloc((max - min) * sizeof(int));
+	ft_write_array(min, max, *range);
+
 	if (!range)
 		return (-1);
-;	size = sizeof(range) / sizeof(int);
-	return (size);
+	return (sizeof(range));
 }
 
-int *ft_range(int min, int max)
-{
-	int *buf;
-
-	if (min >= max)
-		return (NULL);
-	buf = malloc((max - min) * sizeof(int));
-	ft_write_array(min, max, buf);
-	return (buf);
-}
-
-void ft_write_array(int min, int max, int *arr)
+void	ft_write_array(int min, int max, int **arr)
 {
 	int	i;
 
 	i = 0;
 	while (i < (max - min))
 	{
-		arr[i] = min + i;
+		*arr[i] = min + i;
 		i++;
 	}
 }
