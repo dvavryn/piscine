@@ -18,7 +18,7 @@ int	ft_atoi_base(char *nbr, char *base)
 	int	len;
 	int	i;
 	int	result;
-
+----------------------------------------PUT CHECK RULES IN HERE
 	radix = get_radix(base);
 	len = get_radix(nbr);
 	result = 0;
