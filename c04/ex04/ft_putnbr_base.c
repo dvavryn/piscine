@@ -14,7 +14,7 @@
 
 int		ft_check_radix(char *radix);
 void	ft_putchar(char c);
-char	ft_put_radix_char(int pos, char *radix);
+void	ft_put_radix_char(int pos, char *radix);
 int		ft_check_rules(int radix, char *base);
 
 // Main to test ft_putnbr_base.c just uncomment to test
@@ -62,7 +62,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 	if (nbr >= radix)
 		ft_putnbr_base(nbr / radix, base);
-	ft_putchar(ft_put_radix_char(nbr % radix, base));
+	ft_put_radix_char(nbr % radix, base);
 }
 
 int	ft_check_radix(char *base)
@@ -81,19 +81,14 @@ int	ft_check_radix(char *base)
 		return (counter_1);
 }
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-char	ft_put_radix_char(int pos, char *radix)
+void	ft_put_radix_char(int pos, char *radix)
 {
 	int	counter;
 
 	counter = 0;
 	while (counter < pos)
 		counter++;
-	return (radix[counter]);
+	write(1, &radix[counter], 1);
 }
 
 int	ft_check_rules(int radix, char *base)
