@@ -12,13 +12,13 @@
 
 /* #include <stdio.h>
 
-void	bubblesort(char **arr, int n);
+void	ft_sort_params(char **arr, int n);
 
 int	main(int argc, char **argv)
 {
 	int	i;
 
-	bubblesort(argv, argc);
+	ft_sort_params(argv, argc);
 	i = 1;
 	while (i < argc)
 	{
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
  */
 int		ft_strcmp(char *s1, char *s2);
 
-void	bubblesort(char **arr, int n)
+void	ft_sort_params(char **arr, int n)
 {
 	int		i;
 	int		j;
