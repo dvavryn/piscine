@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/20 13:52:02 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/02/20 13:52:04 by dvavryn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
-void	ft_write_array(int min, int max, int **arr);
-/* 
+/*
 int	ft_ultimate_range(int **range, int min, int max);
 #include <stdio.h>
 int	main(void)
@@ -22,7 +33,7 @@ int	main(void)
 	printf("\nSize of Array is %i\n", size);
 	free(range);
 }
- */
+*/
 
 int	ft_ultimate_range(int **range, int min, int max)
 {

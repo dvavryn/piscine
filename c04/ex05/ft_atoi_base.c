@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/20 13:48:59 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/02/20 13:49:00 by dvavryn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	get_radix(char *base);
 int	find_in_base(char c, char *base);
 int	ft_power(int nbr, int pwr);
@@ -18,7 +30,7 @@ int	ft_atoi_base(char *nbr, char *base)
 	int	len;
 	int	i;
 	int	result;
-----------------------------------------PUT CHECK RULES IN HERE
+
 	radix = get_radix(base);
 	len = get_radix(nbr);
 	result = 0;
