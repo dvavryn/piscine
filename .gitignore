@@ -1,6 +1,5 @@
 *.out
 .vscode
 *.old
-*.pdf
 .DS_Store
 *.gch
