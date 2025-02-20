@@ -16,14 +16,20 @@ c03
 c04
 	50%
 		KO : ex03, ex04, ex05
+			ex03 - ft_atoi.c
+				whitespaces missing -> isspace(3)
+			ex04 - ft_putnbr_base.c
+				?? dunno whats wrong
+			ex05 - rule checking
+				wont fix!
 
 c05
 	?
-		not turned in : ex08
+		not turned in : ex08 - ten queens - wont turn in!
 
 c06
 	?
-
+	
 c07
 	?
 		not turned in : ex04, ex05
