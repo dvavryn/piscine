@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-/* void	ft_putstr(char *str);
+void	ft_putstr(char *str);
 
 int	main(int argc, char **argv)
 {
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 		i--;
 	}
 }
- */
+
 void	ft_putstr(char *str)
 {
 	int	counter;

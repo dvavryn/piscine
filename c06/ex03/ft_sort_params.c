@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h>
+#include <unistd.h>
 
 void	ft_sort_params(char **arr, int n);
+void	ft_putstr(char *str);
 
 int	main(int argc, char **argv)
 {
@@ -22,11 +23,12 @@ int	main(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		printf("%s\n", argv[i]);
+		ft_putstr(argv[i]);
+		write(1, "\n", 1);
 		i++;
 	}
 }
- */
+
 int		ft_strcmp(char *s1, char *s2);
 
 void	ft_sort_params(char **arr, int n)
@@ -65,4 +67,10 @@ int	ft_strcmp(char *s1, char *s2)
 		counter++;
 	}
 	return (s1[counter] - s2[counter]);
+}
+
+void	ft_putstr(char *str)
+{
+	while (*str)
+		write(1, str++, 1);
 }
