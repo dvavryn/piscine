@@ -1,0 +1,16 @@
+write:
+	ft_putchar, ft_putstr, ft_putnum;
+
+malloc:
+	allocate memory
+
+free:
+	free allocated memory
+
+open:
+
+
+read:
+
+
+close:
