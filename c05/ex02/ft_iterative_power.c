@@ -9,16 +9,15 @@
 /*   Updated: 2025/02/17 13:02:08 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
+/*
 #include <stdio.h>
 
-int ft_iterative_power(int nb, int power);
+int	ft_iterative_power(int nb, int power);
 
-int	main (void)
+int	main(void)
 {
 	printf("%i", ft_iterative_power(16, 2));
-}
+}*/
 
 int	ft_iterative_power(int nb, int power)
 {

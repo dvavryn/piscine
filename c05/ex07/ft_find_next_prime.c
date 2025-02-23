@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_prime(int nb);
+int	ft_is_prime(int nb);
+
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,9 +26,14 @@ int main (int argc, char **argv)
 */
 int	ft_find_next_prime(int nb)
 {
-	while (!ft_is_prime(nb))
-		nb++;
-	return (nb);
+	int	n;
+
+	if (ft_is_prime(nb))
+		return (nb);
+	n = nb + 1;
+	while (ft_is_prime(n) != 1)
+		n++;
+	return (n);
 }
 
 int	ft_is_prime(int nb)

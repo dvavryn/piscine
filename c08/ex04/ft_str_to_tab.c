@@ -10,22 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <stdlib.h>
-# include <unistd.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-
-typedef struct s_stock_str
-{
-	int		size;
-	char 	*str;
-	char	*copy;
-}	t_stock_str;
-
-
-void	free_buff(t_stock_str *buff, int i);
-int	ft_strlen(char *str);
+int		ft_strlen(char *str);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strdup(char *src);
+void	free_buff(t_stock_str *buff, int i);
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
@@ -39,7 +30,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	while (i < ac)
 	{
 		buff[i].size = ft_strlen(av[i]);
-		buff[i].str = ft_strdup(av[i]);
+		buff[i].str = av[i];
 		buff[i].copy = ft_strdup(buff[i].str);
 		if (!buff[i].str || !buff[i].copy)
 		{
@@ -48,9 +39,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 		}
 		i++;
 	}
-	buff[i].size = 0;
-	buff[i].str = NULL;
-	buff[i].copy = NULL;
+	buff[i].str = 0;
 	return (buff);
 }
 
@@ -58,7 +47,6 @@ void	free_buff(t_stock_str *buff, int i)
 {
 	while (i >= 0)
 	{
-		free(buff[i].str);
 		free(buff[i].copy);
 		i--;
 	}
@@ -102,4 +90,3 @@ char	*ft_strdup(char *src)
 	ft_strcpy(output, src);
 	return (output);
 }
-
