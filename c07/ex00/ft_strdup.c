@@ -12,10 +12,10 @@
 
 #include <stdlib.h>
 
-void	ft_strcpy(char *src, char *dest);
+char	*ft_strcpy(char *dest, char *src);
 int		ft_strlen(char *str);
 
-/* #include <stdio.h>
+/*#include <stdio.h>
 
 char	*ft_strdup(char *src);
 
@@ -35,14 +35,14 @@ int main(void)
 	{
 		printf("Memory allocation failed!\n");
 	}
-} */
-
+}
+*/
 char	*ft_strdup(char *src)
 {
 	char	*output;
 
 	output = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
-	ft_strcpy(src, output);
+	ft_strcpy(output, src);
 	return (output);
 }
 
@@ -58,7 +58,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-void	ft_strcpy(char *src, char *dest)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -69,4 +69,5 @@ void	ft_strcpy(char *src, char *dest)
 		i++;
 	}
 	dest[i] = '\0';
+	return (dest);
 }

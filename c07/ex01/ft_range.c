@@ -44,7 +44,7 @@ int	*ft_range(int min, int max)
 
 	if (min >= max)
 		return (NULL);
-	buf = malloc((max - min) * sizeof(int));
+	buf = (int *)malloc((max - min) * sizeof(int));
 	ft_write_array(min, max, buf);
 	return (buf);
 }
