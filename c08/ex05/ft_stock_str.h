@@ -49,42 +49,4 @@ char	*ft_strdup(char *src)
 	return (output);
 }
 
-struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
-{
-	t_stock_str	*buff;
-	int			i;
-
-	buff = (t_stock_str *)malloc((ac + 1) * sizeof(t_stock_str));
-	if (!buff)
-		return (NULL);
-	i = 0;
-	while (i < ac)
-	{
-		buff[i].size = ft_strlen(av[i]);
-		buff[i].str = ft_strdup(av[i]);
-		buff[i].copy = ft_strdup(buff[i].str);
-		if (!buff[i].str || !buff[i].copy)
-		{
-			free_buff(buff, i);
-			return (NULL);
-		}
-		i++;
-	}
-	buff[i].size = 0;
-	buff[i].str = NULL;
-	buff[i].copy = NULL;
-	return (buff);
-}
-
-void	free_buff(t_stock_str *buff, int i)
-{
-	while (i >= 0)
-	{
-		free(buff[i].str);
-		free(buff[i].copy);
-		i--;
-	}
-	free(buff);
-}
-
 #endif
