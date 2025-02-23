@@ -1,6 +1,3 @@
-#ifndef FT_STOCK_STR_H
-# define FT_STOCK_STR_H
-
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -11,6 +8,26 @@ typedef struct s_stock_str
 	char	*copy;	// stcpy *str
 }	t_stock_str;
 
+void	ft_show_tab(struct s_stock_str *par);
+void	ft_putstr(char *str);
+void	ft_putnum(int num);
+void	free_buff(t_stock_str *buff, int i);
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av);
+
+int main (void)
+{
+	char *hello[5] =
+	{
+		"Hello",
+		"world",
+		"here",
+		"i",
+		"am"
+	};
+	t_stock_str *vollgas = ft_strs_to_tab(5, hello);
+	ft_show_tab(vollgas);
+	ft_putstr("\n\nGESCHAFFT!!!!");
+}
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -87,4 +104,48 @@ void	free_buff(t_stock_str *buff, int i)
 	free(buff);
 }
 
-#endif
+void	ft_show_tab(struct s_stock_str *par)
+{
+	int	i;
+
+	i = 0;
+	while (par[i].size != 0
+		&& par[i].str != NULL
+		&& par[i].copy != NULL)
+	{
+		ft_putstr(par[i].str);
+		ft_putstr("\n");
+		ft_putnum(par[i].size);
+		ft_putstr("\n");
+		ft_putstr(par[i].copy);
+		ft_putstr("\n");
+		i++;
+	}
+}
+
+void	ft_putstr(char *str)
+{
+	while (*str)
+		write(1, str++, 1);
+}
+
+void	ft_putnum(int num)
+{
+	char	c;
+
+	c = (num % 10) + '0';
+	if (num == -214783648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (num < 0)
+	{
+		write(1, "-", 1);
+	}
+	if (num >= 10)
+	{
+		ft_putnum(num / 10);
+	}
+	write(1, &c, 1);
+}

@@ -1,11 +1,21 @@
-#include "ft_stock_str.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_show_tab.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/23 18:09:17 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/02/23 18:09:19 by dvavryn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_putstr(char *str);
 void	ft_putnum(int num);
 
-void ft_show_tab(struct s_stock_str *par)
+void	ft_show_tab(struct s_stock_str *par)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (par[i].size != 0
@@ -14,7 +24,7 @@ void ft_show_tab(struct s_stock_str *par)
 	{
 		ft_putstr(par[i].str);
 		ft_putstr("\n");
-		ft_putnbr(par[i].size);
+		ft_putnum(par[i].size);
 		ft_putstr("\n");
 		ft_putstr(par[i].copy);
 		ft_putstr("\n");
@@ -24,13 +34,13 @@ void ft_show_tab(struct s_stock_str *par)
 
 void	ft_putstr(char *str)
 {
-	while(*str)
+	while (*str)
 		write(1, str++, 1);
 }
 
 void	ft_putnum(int num)
 {
-	char c;
+	char	c;
 
 	c = (num % 10) + '0';
 	if (num == -214783648)
