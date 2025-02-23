@@ -3,9 +3,9 @@
 
 typedef struct s_stock_str
 {
-	int		size;
-	char	*str;
-	char	*copy;
+	int		size;	// str_len *str
+	char	*str;	// *str
+	char	*copy;	// stcpy *str
 }	t_stock_str;
 
 #endif
