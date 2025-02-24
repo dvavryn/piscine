@@ -52,10 +52,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 }
 
 int	ft_total_len(int size, char **strs, char *sep)
-{
-	int	len;
-	int	i;
-
+{ft_total_len(int size, char **s
 	len = 0;
 	i = 0;
 	while (i < size)
@@ -98,5 +95,6 @@ char	*ft_concat(int size, char **strs, char *sep, char *dest)
 		}
 		i++;
 	}
+	dest[k++] = '\0';
 	return (dest);
 }
