@@ -6,7 +6,7 @@
 /*   By: dvavryn <dvavryn@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 20:31:52 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/25 12:20:52 by dvavryn          ###   ########.fr       */
+/*   Updated: 2025/02/25 12:28:22 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 char	*ft_strcpy(char *dest, char *src);
 int		ft_strlen(char *str);
 
+/*
 #include <stdio.h>
-
 char	*ft_strdup(char *src);
-
 int main(void)
 {
 	char *original = "Hello World!";
@@ -47,7 +46,7 @@ char	*ft_strdup(char *src)
 	ft_strcpy(output, src);
 	return (output);
 }
-
+*/
 int	ft_strlen(char *str)
 {
 	int	i;
