@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: dvavryn <dvavryn@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 20:31:52 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/17 20:31:55 by dvavryn          ###   ########.fr       */
+/*   Updated: 2025/02/25 12:20:52 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strcpy(char *dest, char *src);
 int		ft_strlen(char *str);
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 char	*ft_strdup(char *src);
 
@@ -36,12 +36,14 @@ int main(void)
 		printf("Memory allocation failed!\n");
 	}
 }
-*/
+
 char	*ft_strdup(char *src)
 {
 	char	*output;
 
 	output = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
+	if (!output)
+		return (NULL);
 	ft_strcpy(output, src);
 	return (output);
 }
