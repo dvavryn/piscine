@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: dvavryn <dvavryn@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 13:52:55 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/20 13:52:56 by dvavryn          ###   ########.fr       */
+/*   Updated: 2025/02/24 17:13:17 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int main (void)
 	printf("%s\n", result);
 	free(result);
 	return 0;
-} */
-
+} 
+*/
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	int		total_len;
@@ -52,7 +52,10 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 }
 
 int	ft_total_len(int size, char **strs, char *sep)
-{ft_total_len(int size, char **s
+{
+	int i;
+	int len;
+	
 	len = 0;
 	i = 0;
 	while (i < size)

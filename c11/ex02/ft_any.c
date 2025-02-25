@@ -14,7 +14,6 @@ int main(void)
 				"Hello", 
 				"Hello", 
 				"Hello",};
-	tab[8] = NULL;
 	printf("%d", ft_any(tab, ft_cmp_hello));
 }
 

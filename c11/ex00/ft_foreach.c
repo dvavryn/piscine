@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: dvavryn <dvavryn@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 22:45:16 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/23 22:45:18 by dvavryn          ###   ########.fr       */
+/*   Updated: 2025/02/24 16:41:40 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <unistd.h>
+#include <unistd.h>
 void	ft_foreach(int *tab, int length, void(*f)(int));
 void	ft_putnbr(int nb);
 int main(void)
@@ -40,7 +40,7 @@ void	ft_putnbr(int nb)
 	}
 	write(1, &c, 1);
 }
-*/
+
 // USAGE: ft_foreach(tab, 1337, &ft_putnbr);
 // USAGE: f(int) - instead of ft_putnbr(int)
 void	ft_foreach(int *tab, int length, void (*f)(int))

@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvavryn <dvavryn@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 15:12:35 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/25 12:05:06 by dvavryn          ###   ########.fr       */
+/*   Created: 2025/02/25 11:58:00 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/02/25 12:02:38 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+#include "ft_abs.h"
+#include <stdio.h>
 
-# define ABS(val) (val < 0 ? -val : val)
-#endif
+int main(void)
+{
+    int a = -15;
+
+    printf("%d", ABS(a));
+}
