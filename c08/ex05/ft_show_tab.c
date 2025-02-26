@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: dvavryn <dvavryn@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:09:17 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/23 18:09:19 by dvavryn          ###   ########.fr       */
+/*   Updated: 2025/02/26 15:02:58 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_stock_str.h"
 
 void	ft_putstr(char *str);
 void	ft_putnum(int num);
