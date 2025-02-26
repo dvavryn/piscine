@@ -6,7 +6,7 @@
 /*   By: dvavryn <dvavryn@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 17:19:47 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/26 15:02:36 by dvavryn          ###   ########.fr       */
+/*   Updated: 2025/02/26 15:59:11 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	while (i < ac)
 	{
 		buff[i].size = ft_strlen(av[i]);
-		buff[i].str = av[i];
-		buff[i].copy = ft_strdup(buff[i].str);
+		buff[i].str = ft_strdup(av[i]);
+		buff[i].copy = ft_strdup(av[i]);
 		if (!buff[i].str || !buff[i].copy)
 		{
 			free_buff(buff, i);
