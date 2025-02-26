@@ -6,11 +6,12 @@
 /*   By: dvavryn <dvavryn@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 18:09:17 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/26 15:02:58 by dvavryn          ###   ########.fr       */
+/*   Updated: 2025/02/26 16:17:52 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
+#include <unistd.h>
 
 void	ft_putstr(char *str);
 void	ft_putnum(int num);
