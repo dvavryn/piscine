@@ -1,34 +1,31 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
 
-SRCS_DIR = srcs
-INCLUDES_DIR = includes
-OBJS_DIR = $(SRCS_DIR)
+CFLAGS = -Wall -Werror -Wextra
 
-SRCS = ft_putchar.c ft_swap.c ft_putstr.c ft_strlen.c ft_strcmp.c
-OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
+SRCDIR = srcs
 
-HEADER = $(INCLUDES_DIR)/ft.h
+HSRCDIR = includes
 
-LIBFT = libft.a
+SRCS =  $(SRCDIR)/ft_putchar.c $(SRCDIR)/ft_putstr.c $(SRCDIR)/ft_strcmp.c $(SRCDIR)/ft_strlen.c $(SRCDIR)/ft_swap.c
 
-all: $(LIBFT)
+OBJS = $(SRCS:.c=.o) $(HSRCDIR:.h=.o)
 
-$(LIBFT): $(OBJS)
-	@echo "archiving onject files int $(LIBFT)..."
-	ar rcs $(LIBFT) $(OBJS)
-	@echo "$(LIBFT) created sucessfuly!"
+NAME = libft.a
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(HEADER)
+all: $(NAME) 
+
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@echo "cleaning object files..."
 	rm -f $(OBJS)
-	@echo "object files removed!"
 
 fclean: clean
-	@echo "cleaning $(LIBFT)..."
-	rm -f $(LIBFT)
-	@echo "$(LIBFT) removed!"
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
