@@ -1,24 +1,22 @@
-CC = cc
-
-CFLAGS = -Wall -Werror -Wextra
-
-SRCDIR = srcs
-
-HSRCDIR = includes
-
-SRCS =  $(SRCDIR)/ft_putchar.c $(SRCDIR)/ft_putstr.c $(SRCDIR)/ft_strcmp.c $(SRCDIR)/ft_strlen.c $(SRCDIR)/ft_swap.c
-
-OBJS = $(SRCS:.c=.o) $(HSRCDIR:.h=.o)
-
 NAME = libft.a
 
-all: $(NAME) 
+CC = cc
+
+CFLAGS = -Wall -Wextra -Werror
+
+SRCS = ./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_strcmp.c ./srcs/ft_strlen.c ./srcs/ft_swap.c
+
+OBJS = $(SRCS:.c=.o)
+
+HEADER = ./includes/ft.h
+
+%.o: %.c
+	$(CC) $(CFLAGS) -I $(HEADER) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	
+all: $(NAME)
 
 clean:
 	rm -f $(OBJS)
